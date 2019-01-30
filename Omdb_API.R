@@ -12,15 +12,15 @@ got_title=find_by_title("Game of thrones", type = "series",season = "1", episode
 #Find by movie or series by it's id, you can get the id by going to imdb page of a movie and in the URL of that page you will get id
 got_id=find_by_id("tt1480055", type = "series", year_of_release = "2011", plot = "short",
                   include_tomatoes = FALSE, api_key = omdb_api_key())
-#Get the list of Actors 
+#Get the list of Actors with argument as the object returned by find_by_title or find_by_id
 Actors = vect2list(get_actors(got_title))
-#Get the list of Country
+#Get the list of Country with argument as the object returned by find_by_title or find_by_id
 Country = vect2list(get_countries(got_title))
-#Get the list of Directors
+#Get the list of Directors with argument as the object returned by find_by_title or find_by_id
 Directors = vect2list(get_directors(got_title))
-#Get the list of Genre
+#Get the list of Genre with argument as the object returned by find_by_title or find_by_id
 Genre = vect2list(get_genres(got_title))
-#Get the list of Writers
+#Get the list of Writers with argument as the object returned by find_by_title or find_by_id
 Writers = vect2list(get_writers(got_title))
 # If you want to the search results of imdb for a particular search word
 search = search_by_title("Game of thrones",type = NULL, year_of_release = NULL, api_key = omdb_api_key())
